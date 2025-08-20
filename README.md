@@ -2,27 +2,17 @@
 
 Website of Hardware Protection Association
 
-## dev start
+## Deploy on local PC for development
 
-### install bun
+Requires `bun` JavaScript runtime to download, install packages and deploy server to preview webpages. [Instruction to install bun](https://bun.com/docs/installation)
 
-```sh
-# on linux
-curl -fsSL https://bun.sh/install | bash
-# on windows
-powershell -c "irm bun.sh/install.ps1 | iex"
-```
-
-### start develop
-
-**install deps and setup husky**
+### 1. Install dependencies ([husky](https://typicode.github.io/husky/), [tailwindCSS](https://tailwindcss.com/), [daisyUI](https://daisyui.com/) is included)
 
 ```sh
 bun install
 bun run prepare
 ```
-
-**start deev server**
+### 2. Start server
 
 ```sh
 bun run dev
@@ -37,9 +27,11 @@ bun run preview
 
 ---
 
----
+<!-- TODO: remove this section after page is complete -->
 
-# template readme
+# Readme from project template
+
+----
 
 **This template should help get you started developing with Svelte and TypeScript in Vite.**
 
