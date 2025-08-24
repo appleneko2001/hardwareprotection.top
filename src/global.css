@@ -1,0 +1,14 @@
+:root {
+  font-family:
+    Roboto, Arial, 'Noto Sans', 'Noto Sans CJK SC', 'Noto Sans CJK',
+    system-ui, sans-serif;
+
+  --foreground-colour: black;
+  --background-colour: white;
+  --layout-border-colour: gray;
+
+  --icon-hover-color: green;
+  --button-hover-color: rgba(0, 255, 0, 0.1);
+
+  --card-background-color: #d2d2d2;
+}

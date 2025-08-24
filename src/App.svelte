@@ -1,47 +1,76 @@
 <script lang="ts">
-  import svelteLogo from './assets/svelte.svg'
-  import viteLogo from '/vite.svg'
-  import Counter from './lib/Counter.svelte'
+  import SocialMediaIcon from './components/social-media-icon.svelte'
+  import { SocialMediaLinks } from './components/social-media-links'
+  import HomePage from './pages/home.svelte'
 </script>
 
-<main>
-  <div>
-    <a href="https://vite.dev" target="_blank" rel="noreferrer">
-      <img src={viteLogo} class="logo" alt="Vite Logo" />
-    </a>
-    <a href="https://svelte.dev" target="_blank" rel="noreferrer">
-      <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
-    </a>
+<svelte:head>
+  <title>Page</title>
+</svelte:head>
+
+<div class="app-header">
+  <div class="content-layout">
+    <div class="logo">LOGO</div>
+    <nav>
+      <SocialMediaIcon model={SocialMediaLinks.discord} />
+      <SocialMediaIcon model={SocialMediaLinks.qq} />
+      <SocialMediaIcon model={SocialMediaLinks.github} />
+    </nav>
   </div>
-  <h1>Vite + Svelte Templates</h1>
+</div>
 
-  <div class="card">
-    <Counter />
+<div class="app-layout">
+  <div class="content-layout">
+    <HomePage />
   </div>
+</div>
 
-  <p>
-    Check out <a href="https://github.com/sveltejs/kit#readme" target="_blank" rel="noreferrer">SvelteKit</a>, the official Svelte app framework powered by Vite!
-  </p>
-
-  <p class="read-the-docs">
-    Click on the Vite and Svelte logos to learn more
-  </p>
-</main>
+<div class="app-footer">
+  <div class="content-layout">2025</div>
+</div>
 
 <style>
-  .logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
+  .app-header {
+    position: sticky;
+    top: 0;
+    border-bottom: black solid 1px;
+    height: 64px;
+    align-content: center;
+    background-color: white;
+
+    .content-layout {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav {
+      display: flex;
+      flex-flow: row nowrap;
+      gap: 8px;
+      margin-right: 8px;
+    }
   }
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
+  .app-footer {
+    border-top: black solid 1px;
+    position: relative;
+    bottom: 0;
   }
-  .logo.svelte:hover {
-    filter: drop-shadow(0 0 2em #ff3e00aa);
+  .app-layout {
+    min-height: 80vh;
   }
-  .read-the-docs {
-    color: #888;
+
+  .content-layout {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+
+  @media screen and (width > 1000px) {
+    .content-layout {
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 </style>

@@ -37,6 +37,7 @@
     "vite": "^7.1.2"
   },
   "dependencies": {
-    "daisyui": "^5.0.50"
+    "daisyui": "^5.0.50",
+    "prettier-plugin-svelte": "^3.4.0"
   }
 }
